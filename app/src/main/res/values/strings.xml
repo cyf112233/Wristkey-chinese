@@ -1,71 +1,70 @@
 <resources>
     <string name="app_name">Wristkey</string>
 
-    <string name="about_app">A secure cross-platform 2FA client.</string>
-    <string name="donation_message">Your donations help me maintain my projects.\n\nTap on the button below to visit my donation page. If your watch has a browser, it may open in the watch browser.</string>
-    <string name="bitwarden_import_blurb">To import secrets from Bitwarden, export an unencrypted Bitwarden JSON file and place it in the following directory: </string>
-    <string name="authenticator_import_blurb">Export your accounts and take a picture of the QR code. Make sure it is a JPG/PNG image and place it in the following directory: </string>
-    <string name="otpauth_import_blurb">Take a picture of a QR code, make sure it is a JPG/PNG image and place it in the following directory: </string>
-    <string name="aegis_import_blurb">To import secrets from Aegis Authenticator, export an unencrypted Aegis JSON file and place it in the following directory: </string>
-    <string name="andotp_import_blurb">To import secrets from andOTP, export an unencrypted andOTP JSON file and place it in the following directory: </string>
-    <string name="wristkey_import_blurb">To import secrets from an old backup, place your WFS file in the following directory: </string>
-    <string name="file_import_blurb">To import logins from a file, make sure you export them in an unencrypted JSON format and place them on your device\'s internal storage. You can then use the file picker below.\n\nThe following services are currently supported:\n⋅ Aegis Authenticator\n⋅ Bitwarden&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;\n⋅ AndOTP&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</string>
-    <string name="adb_import_blurb">To import logins via ADB, make sure you export them in an unencrypted JSON format, and send them to this device via ADB commands. \n\nThe following services are currently supported:\n⋅ Aegis Authenticator\n⋅ Bitwarden&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;\n⋅ AndOTP&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;\n\nRun these commands to send your export file to this device:</string>
+    <string name="about_app">一个安全的跨平台2FA客户端。</string>
+    <string name="donation_message">您的捐赠有助于我维护我的项目。\n\n点击下方按钮访问我的捐赠页面。如果您的手表有浏览器，可能会在手表浏览器中打开。</string>
+    <string name="bitwarden_import_blurb">要从Bitwarden导入密钥，请导出一个未加密的Bitwarden JSON文件，并将其放置在以下目录：</string>
+    <string name="authenticator_import_blurb">导出您的账户并拍摄QR码。确保它是JPG/PNG图像，并将其放置在以下目录：</string>
+    <string name="otpauth_import_blurb">拍摄一个QR码，确保它是JPG/PNG图像，并将其放置在以下目录：</string>
+    <string name="aegis_import_blurb">要从Aegis Authenticator导入密钥，请导出一个未加密的Aegis JSON文件，并将其放置在以下目录：</string>
+    <string name="andotp_import_blurb">要从andOTP导入密钥，请导出一个未加密的andOTP JSON文件，并将其放置在以下目录：</string>
+    <string name="wristkey_import_blurb">要从旧备份导入密钥，请将您的WFS文件放置在以下目录：</string>
+    <string name="file_import_blurb">要从文件导入登录信息，请确保您以未加密的JSON格式导出它们，并将其放置在设备的内部存储中。然后可以使用下面的文件选择器。\n\n目前支持以下服务：\n⋅ Aegis Authenticator\n⋅ Bitwarden\n⋅ AndOTP</string>
+    <string name="adb_import_blurb">要通过ADB导入登录信息，请确保您以未加密的JSON格式导出它们，并通过ADB命令发送到此设备。\n\n目前支持以下服务：\n⋅ Aegis Authenticator\n⋅ Bitwarden\n⋅ AndOTP\n\n运行以下命令将导出文件发送到此设备：</string>
     <string name="adb_commands"><![CDATA[file=<file>\nadb push $file /data/local/tmp/\nadb shell run-as app.wristkey mkdir files/\nadb shell run-as app.wristkey cp /data/local/tmp/$file files/\nadb shell rm /data/local/tmp/$file]]></string>
-    <string name="about_url">https://github.com/0x4f53/Wristkey</string>
-    <string name="hello_world">Hello Square World!</string>
-    <string name="title_activity_add">AddActivity</string>
+    <string name="about_url"><url id="d2ulu4c7fff7qef5eesg" type="url" status="parsed" title="GitHub - cyf112233/Wristkey-chinese: A free and open-source 2FA app for smartwatches." wc="1646">https://github.com/cyf112233/Wristkey-chinese/</url></string>
+    <string name="hello_world">你好，方世界！</string>
+    <string name="title_activity_add">添加活动</string>
 
-    <string name="use_adb_blurb">You can use the file picker, ADB or a file transfer app for this.</string>
+    <string name="use_adb_blurb">您可以使用文件选择器、ADB或文件传输应用来完成此操作。</string>
 
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-    <string name="importing">Importing...</string>
+    <string name="next">下一步</string>
+    <string name="previous">上一步</string>
+    <string name="importing">正在导入...</string>
     <string name="bitwarden_import">Bitwarden</string>
-    <string name="aegis_import">Aegis\nAuthenticator</string>
+    <string name="aegis_import">Aegis\n身份验证器</string>
     <string name="andotp_import">andOTP</string>
-    <string name="wristkey_import">Wristkey\nbackup</string>
-    <string name="import_description">Opening file</string>
-    <string name="authenticator_import">Google\nAuthenticator</string>
-    <string name="otpauth_import">QR Code</string>
-    <string name="title_activity_bitwarden_jsonimport">BitwardenJSONImport</string>
-    <string name="title_activity_wristkey_import">WristkeyImport</string>
-    <string name="title_activity_otpauth_import">OtpAuthImport</string>
-    <string name="title_activity_aegis_jsonimport">AegisJSONImport</string>
-    <string name="title_activity_file_import">FileImport</string>
-    <string name="title_activity_adb_import">AdbImport</string>
-    <string name="title_activity_receive_decrypt">ReceiveDecrypt</string>
-    <string name="title_activity_encrypt_send">EncryptSend</string>
-    <string name="title_activity_andotp_import">AndOtpImport</string>
+    <string name="wristkey_import">Wristkey\n备份</string>
+    <string name="import_description">打开文件</string>
+    <string name="authenticator_import">Google\n身份验证器</string>
+    <string name="otpauth_import">QR码</string>
+    <string name="title_activity_bitwarden_jsonimport">BitwardenJSON导入</string>
+    <string name="title_activity_wristkey_import">Wristkey导入</string>
+    <string name="title_activity_otpauth_import">OtpAuth导入</string>
+    <string name="title_activity_aegis_jsonimport">AegisJSON导入</string>
+    <string name="title_activity_file_import">文件导入</string>
+    <string name="title_activity_adb_import">ADB导入</string>
+    <string name="title_activity_receive_decrypt">接收解密</string>
+    <string name="title_activity_encrypt_send">加密发送</string>
+    <string name="title_activity_andotp_import">AndOtp导入</string>
     <string name="bitcoin_wallet_address">19xgj8XoDMcHSENUDrkW3GtjQjfnbnmWTS</string>
 
-    <string name="message_keyguard">Unlock app</string>
+    <string name="message_keyguard">解锁应用</string>
 
-    <string name="donation_uri">https://github.com/0x4f53/0x4f53/blob/main/README.md</string>
+    <string name="donation_uri"><url id="d2ulu4c7fff7qef5ees0" type="url" status="parsed" title="0x4f53/README.md at main · 0x4f53/0x4f53" wc="1122">https://github.com/0x4f53/0x4f53/blob/main/README.md</url></string>
 
-    <string name="copyright">Copyright © 2023 Owais Shaikh\n(me@0x4f.in)
-\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-    </string>
-    <string name="settings_label">Settings</string>
-    <string name="wifi_error">Can\'t connect to Wi-Fi network. Go to your device settings and connect to one before continuing.\n\nIf your device doesn\'t support Wi-Fi, try using the ADB transfer method instead.</string>
-    <string name="wifi_connection_request">wants to send you data</string>
-    <string name="issuer_empty">Please enter issuer name</string>
-    <string name="secret_empty">This secret is too short</string>
-    <string name="account_empty">Please enter username/email</string>
-    <string name="go_back">Discard changes and go back?</string>
-    <string name="delete">Would you like to delete this item?</string>
-    <string name="donate_label">Donate</string>
-    <string name="invalid_qr_code">This QR code is invalid. Please try again.</string>
-    <string name="wifi_transfer_description">Transfer data between two devices, such as a phone and a smartwatch</string>
-    <string name="send_description">With both devices on the same Wi-Fi, open Wristkey on the other device, select the \"Receive\" option and scan the QR code shown below on the other device.</string>
-    <string name="send_description_no_camera">With both devices on the same Wi-Fi, open Wristkey on the other device, select the \"Receive\" option and enter the IP shown.</string>
-    <string name="receive_description">With both devices on the same Wi-Fi, open Wristkey on the other device, select the \"Send\" option and scan this QR code or enter the IP shown.</string>
-    <string name="receive_decrypt">Enter the OTP displayed on the other device to start transfer.</string>
-    <string name="send_encrypt">Enter this OTP on the other device to complete transfer.</string>
-    <string name="forbidden_wifi_transfer">This is a Wristkey Wi-Fi transfer server. It is ephemeral and uses X25519 and AES encryption, no point wasting your time attacking it. 🖕😉</string>
-    <string name="qrCode_content_description_receiver">Scan this QR Code or enter the IP address shown below it.</string>
+    <string name="copyright">版权所有 © 2023 cxkcxkckx\n(me@0x4f.in)
+\n\n特此授予，免费地，任何获得本软件及其相关文档文件（“软件”）的副本的人，在不受限制的情况下处理本软件的权利，包括但不限于使用、复制、修改、合并、发布、分发、再授权和/或出售软件的副本，并允许将软件提供给他人，前提是符合以下条件：
+\n\n上述版权声明和本许可声明应包含在软件的所有副本或重要部分中。
+\n\n本软件“按原样”提供，没有任何形式的明示或暗示的保证，包括但不限于适销性、特定用途的适用性和非侵权性的保证。在任何情况下，作者或版权所有者都不应对任何索赔、损害或其他责任负责，无论是合同行为、侵权行为还是其他行为，都与软件或软件的使用或其他交易有关。</string>
+    <string name="settings_label">设置</string>
+    <string name="wifi_error">无法连接到Wi-Fi网络。请前往设备设置并连接到一个网络，然后再继续。\n\n如果您的设备不支持Wi-Fi，请尝试使用ADB传输方法。</string>
+    <string name="wifi_connection_request">希望向您发送数据</string>
+    <string name="issuer_empty">请输入发行者名称</string>
+    <string name="secret_empty">此密钥太短</string>
+    <string name="account_empty">请输入用户名/邮箱</string>
+    <string name="go_back">放弃更改并返回吗？</string>
+    <string name="delete">您是否希望删除此项？</string>
+    <string name="donate_label">捐赠</string>
+    <string name="invalid_qr_code">此QR码无效。请重试。</string>
+    <string name="wifi_transfer_description">在两个设备（例如手机和智能手表）之间传输数据</string>
+    <string name="send_description">在两个设备连接到同一Wi-Fi网络的情况下，在另一个设备上打开Wristkey，选择“接收”选项，并扫描下方在另一个设备上显示的QR码。</string>
+    <string name="send_description_no_camera">在两个设备连接到同一Wi-Fi网络的情况下，在另一个设备上打开Wristkey，选择“接收”选项，并输入显示的IP地址。</string>
+    <string name="receive_description">在两个设备连接到同一Wi-Fi网络的情况下，在另一个设备上打开Wristkey，选择“发送”选项，并扫描此QR码或输入显示的IP地址。</string>
+    <string name="receive_decrypt">输入另一个设备上显示的OTP以开始传输。</string>
+    <string name="send_encrypt">在另一个设备上输入此OTP以完成传输。</string>
+    <string name="forbidden_wifi_transfer">这是一个Wristkey Wi-Fi传输服务器。它是短暂的，并使用X25519和AES加密，不值得浪费时间攻击它。🖕😉</string>
+    <string name="qrCode_content_description_receiver">扫描此QR码或输入下方显示的IP地址。</string>
 
-    <string name="tile_description">View up to 4 2FA codes instantly. To change what tiles appear, open the Wristkey app on your watch and drag to reorder.</string>
+    <string name="tile_description">即时查看多达4个2FA代码。要更改显示的瓦片，请在手表上打开Wristkey应用并拖动以重新排序。</string>
 </resources>
