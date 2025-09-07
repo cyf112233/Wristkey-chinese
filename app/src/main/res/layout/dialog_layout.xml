@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:layout_marginVertical="5dp"
-                android:text="Dialog Title"
+                android:text="对话框标题"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
@@ -49,18 +49,18 @@
                 android:gravity="center_horizontal"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="25dp"
-                android:text="Dialog Message" />
+                android:text="对话框消息" />
 
             <Button
                 android:id="@+id/positive_button"
                 style="@style/Wristkey.Button"
-                android:text="Positive Button"
+                android:text="确定"
                 android:singleLine="false" />
 
             <Button
                 android:id="@+id/negative_button"
                 style="@style/Wristkey.Button"
-                android:text="Negative Button"
+                android:text="取消"
                 android:singleLine="false" />
 
             <View

@@ -55,7 +55,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/productsans"
                 android:gravity="center"
-                android:text="version x.x"
+                android:text="版本 x.x"
                 android:textSize="12sp"
                 android:textStyle="normal" />
 
@@ -96,7 +96,7 @@
                     android:layout_gravity="center"
                     android:fontFamily="@font/productsans"
                     android:gravity="center"
-                    android:text="With " />
+                    android:text="由 " />
 
                 <TextView
                     android:id="@+id/heart"
@@ -116,7 +116,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/productsans"
                     android:gravity="center"
-                    android:text=" by Owais" />
+                    android:text=" Ovais开发" />
 
             </LinearLayout>
 
@@ -129,13 +129,13 @@
                 android:id="@+id/donateButton"
                 style="@style/Wristkey.Button"
                 app:icon="@drawable/outline_attach_money_24"
-                android:text="Donate" />
+                android:text="捐赠" />
 
             <Button
                 android:id="@+id/licenseButton"
                 style="@style/Wristkey.Button"
                 app:icon="@drawable/outline_gavel_24"
-                android:text="View License" />
+                android:text="查看许可证" />
 
             <View
                 android:layout_width="0dp"
@@ -146,7 +146,7 @@
                 android:id="@+id/backButton"
                 style="@style/Wristkey.Button"
                 app:icon="@drawable/ic_prev"
-                android:text="Back" />
+                android:text="返回" />
 
         </LinearLayout>
     </ScrollView>

@@ -82,7 +82,7 @@
                 android:focusable="true"
                 android:focusableInTouchMode="true"
                 android:scrollHorizontally="true"
-                android:text="Issuer"
+                android:text="发行方"
                 android:textAlignment="textStart" />
 
             <TextView
@@ -91,7 +91,7 @@
                 android:layout_width="wrap_content"
                 android:textSize="13dp"
                 android:layout_height="wrap_content"
-                android:text="Account"
+                android:text="账户"
                 android:focusableInTouchMode="true"
                 android:textAlignment="textStart"
                 android:ellipsize="marquee"

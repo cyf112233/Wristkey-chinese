@@ -42,7 +42,7 @@
                 android:foregroundGravity="center"
                 android:gravity="center"
                 android:letterSpacing="0.05"
-                android:text="Send"
+                android:text="发送"
                 android:textSize="16sp"
                 android:textStyle="normal" />
 
@@ -79,7 +79,7 @@
                 style="@style/Wristkey.Button"
                 android:id="@+id/doneButton"
                 app:icon="@drawable/ic_cc_checkmark"
-                android:text="Done" />
+                android:text="完成" />
 
         </LinearLayout>
     </ScrollView>

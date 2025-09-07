@@ -44,7 +44,7 @@
                 android:letterSpacing="0.05"
                 android:textColor="@color/grayAccents"
                 android:textSize="16sp"
-                android:text="Importing" />
+                android:text="正在导入" />
 
             <com.google.android.material.progressindicator.LinearProgressIndicator
                 android:id="@+id/progress"
@@ -65,7 +65,7 @@
                 android:layout_margin="2.5dp"
                 android:fontFamily="@font/productsans"
                 android:gravity="center"
-                android:text="Importing data..."
+                android:text="正在导入数据..."
                 android:textStyle="normal" />
 
             <View
@@ -76,7 +76,7 @@
             <Button
                 android:id="@+id/doneButton"
                 style="@style/Wristkey.Button"
-                android:text="Save data" />
+                android:text="保存数据" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

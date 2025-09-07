@@ -42,7 +42,7 @@
                 android:foregroundGravity="center"
                 android:gravity="center"
                 android:letterSpacing="0.05"
-                android:text="WiFi Transfer"
+                android:text="WiFi传输"
                 android:textSize="16dp"
                 android:textStyle="normal" />
 
@@ -65,13 +65,13 @@
                 android:id="@+id/send"
                 app:icon="@drawable/baseline_file_upload_24"
                 style="@style/Wristkey.Button"
-                android:text="Send"/>
+                android:text="发送"/>
 
             <Button
                 android:id="@+id/receive"
                 style="@style/Wristkey.Button"
                 app:icon="@drawable/baseline_file_download_24"
-                android:text="Receive" />
+                android:text="接收" />
 
             <View
                 android:layout_width="0dp"
@@ -82,7 +82,7 @@
                 android:id="@+id/backButton"
                 style="@style/Wristkey.Button"
                 app:icon="@drawable/ic_prev"
-                android:text="Back" />
+                android:text="返回" />
 
         </LinearLayout>
     </ScrollView>

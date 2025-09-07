@@ -39,7 +39,7 @@
                 android:fontFamily="@font/productsans"
                 android:foregroundGravity="center"
                 android:gravity="center"
-                android:text="Add Item"
+                android:text="添加项目"
                 android:textColor="@color/grayAccents"
                 android:textSize="16sp"
                 android:letterSpacing="0.05"
@@ -49,7 +49,7 @@
                 android:id="@+id/issuer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Issuer"
+                android:hint="发行方"
                 style="@style/Wristkey.TextInputLayout" >
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -66,7 +66,7 @@
                 style="@style/Wristkey.TextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Secret"
+                android:hint="密钥"
                 app:endIconMode="password_toggle">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 style="@style/Wristkey.TextInputLayout"
                 android:layout_height="wrap_content"
-                android:hint="Account" >
+                android:hint="账户" >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/accountInput"
@@ -96,7 +96,7 @@
                 android:layout_height="wrap_content"
                 app:startIconTint="@color/white"
                 style="@style/Wristkey.TextInputLayout"
-                android:hint="Label" >
+                android:hint="标签" >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/labelInput"
@@ -121,7 +121,7 @@
                     android:fontFamily="@font/productsans"
                     android:foregroundGravity="center"
                     android:gravity="center"
-                    android:text="Mode"
+                    android:text="模式"
                     android:layout_margin="5dp"
                     android:letterSpacing="0.05" />
 
@@ -130,14 +130,14 @@
                     style="@style/Wristkey.RadioButton"
                     android:checked="true"
                     android:drawableStart="@drawable/ic_outline_access_time_24"
-                    android:text="Time"
+                    android:text="时间"
                     />
 
                 <CheckedTextView
                     android:id="@+id/counterButton"
                     style="@style/Wristkey.RadioButton"
                     android:drawableStart="@drawable/baseline_exposure_plus_1_24"
-                    android:text="Counter" />
+                    android:text="计数器" />
 
                 <View
                     android:layout_width="wrap_content"
@@ -150,7 +150,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:hint="Count"
+                    android:hint="计数"
                     app:startIconDrawable="@drawable/outline_add_circle_outline_24" >
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -177,7 +177,7 @@
                         android:fontFamily="@font/productsans"
                         android:foregroundGravity="center"
                         android:gravity="center"
-                        android:text="Validity"
+                        android:text="有效期"
                         android:layout_margin="5dp"
                         android:letterSpacing="0.05" />
 
@@ -221,7 +221,7 @@
                     android:fontFamily="@font/productsans"
                     android:foregroundGravity="center"
                     android:gravity="center"
-                    android:text="Algorithm"
+                    android:text="算法"
                     android:layout_margin="5dp"
                     android:letterSpacing="0.05" />
                 <CheckedTextView
@@ -255,24 +255,24 @@
                     android:fontFamily="@font/productsans"
                     android:foregroundGravity="center"
                     android:gravity="center"
-                    android:text="Digits"
+                    android:text="位数"
                     android:layout_margin="5dp"
                     android:letterSpacing="0.05" />
                 <CheckedTextView
                     android:id="@+id/fourButton"
                     style="@style/Wristkey.RadioButton"
-                    android:text="4 digits"
+                    android:text="4位数"
                     />
                 <CheckedTextView
                     android:id="@+id/sixButton"
                     style="@style/Wristkey.RadioButton"
                     android:checked="true"
-                    android:text="6 digits"
+                    android:text="6位数"
                     />
                 <CheckedTextView
                     android:id="@+id/eightButton"
                     style="@style/Wristkey.RadioButton"
-                    android:text="8 digits"
+                    android:text="8位数"
                     />
             </LinearLayout>
 
@@ -280,13 +280,13 @@
                 android:id="@+id/deleteButton"
                 style="@style/Wristkey.Button"
                 app:icon="@drawable/ic_outline_delete_24"
-                android:text="Delete" />
+                android:text="删除" />
 
             <Button
                 android:id="@+id/doneButton"
                 style="@style/Wristkey.Button"
                 app:icon="@drawable/ic_done"
-                android:text="Done" />
+                android:text="完成" />
 
             <View
                 android:layout_width="0dp"
@@ -297,7 +297,7 @@
                 android:id="@+id/backButton"
                 style="@style/Wristkey.Button"
                 app:icon="@drawable/ic_prev"
-                android:text="Back" />
+                android:text="返回" />
 
         </LinearLayout>
     </ScrollView>

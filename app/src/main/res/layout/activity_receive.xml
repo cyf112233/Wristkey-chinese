@@ -42,7 +42,7 @@
                 android:foregroundGravity="center"
                 android:gravity="center"
                 android:letterSpacing="0.05"
-                android:text="Receive"
+                android:text="接收"
                 android:textSize="16sp"
                 android:textStyle="normal" />
 
@@ -82,7 +82,7 @@
                 style="@style/Wristkey.Button"
                 android:id="@+id/backButton"
                 app:icon="@drawable/ic_prev"
-                android:text="Back" />
+                android:text="返回" />
 
         </LinearLayout>
     </ScrollView>

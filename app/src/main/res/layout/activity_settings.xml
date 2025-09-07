@@ -66,7 +66,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/productsans"
                     android:letterSpacing="0.05"
-                    android:text="Search"
+                    android:text="搜索"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:ellipsize="marquee"
@@ -102,7 +102,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/productsans"
                     android:letterSpacing="0.05"
-                    android:text="Clock"
+                    android:text="时钟"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:ellipsize="marquee"
@@ -138,7 +138,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/productsans"
                     android:letterSpacing="0.05"
-                    android:text="App lock"
+                    android:text="应用锁"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:ellipsize="marquee"
@@ -174,7 +174,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/productsans"
                     android:letterSpacing="0.05"
-                    android:text="Round device"
+                    android:text="圆形设备"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:ellipsize="marquee"
@@ -210,7 +210,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/productsans"
                     android:letterSpacing="0.05"
-                    android:text="Scrolling Text"
+                    android:text="滚动文本"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:ellipsize="marquee"
@@ -251,7 +251,7 @@
                     android:marqueeRepeatLimit="marquee_forever"
                     android:scrollHorizontally="true"
                     android:singleLine="true"
-                    android:text="Compact view"
+                    android:text="紧凑视图"
                     android:textColor="@color/white"
                     android:textSize="14sp" />
 
@@ -288,7 +288,7 @@
                     android:marqueeRepeatLimit="marquee_forever"
                     android:scrollHorizontally="true"
                     android:singleLine="true"
-                    android:text="Concealed view"
+                    android:text="隐藏视图"
                     android:textColor="@color/white"
                     android:textSize="14sp" />
 
@@ -303,7 +303,7 @@
             <Button
                 android:id="@+id/aboutButton"
                 style="@style/Wristkey.Button"
-                android:text="About Wristkey"
+                android:text="关于Wristkey"
                 app:icon="@drawable/ic_outline_info_24" />
 
             <View
@@ -315,7 +315,7 @@
                 android:id="@+id/backButton"
                 style="@style/Wristkey.Button"
                 app:icon="@drawable/ic_prev"
-                android:text="Back" />
+                android:text="返回" />
 
         </LinearLayout>
     </ScrollView>

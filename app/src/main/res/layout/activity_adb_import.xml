@@ -46,7 +46,7 @@
                 android:letterSpacing="0.05"
                 android:textColor="@color/grayAccents"
                 android:textSize="16sp"
-                android:text="Import via ADB" />
+                android:text="通过ADB导入" />
 
             <com.google.android.material.progressindicator.LinearProgressIndicator
                 android:id="@+id/progress"
@@ -92,7 +92,7 @@
                 android:id="@+id/backButton"
                 app:icon="@drawable/ic_prev"
                 style="@style/Wristkey.Button"
-                android:text="Back" />
+                android:text="返回" />
 
         </LinearLayout>
     </ScrollView>
