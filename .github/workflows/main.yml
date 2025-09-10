@@ -1,0 +1,49 @@
+name: Decode and Upload Keystore
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+jobs:
+  decode-and-upload-keystore:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Create keystore directory
+        run: mkdir -p keystore
+        
+      - name: Decode Keystore using base64 command
+        run: |
+          echo "${{ secrets.KEYSTORE }}" | base64 -d > keystore/your_signing_keystore.jks
+          
+      - name: Verify keystore file
+        run: |
+          if [ -f "keystore/your_signing_keystore.jks" ] && [ -s "keystore/your_signing_keystore.jks" ]; then
+            echo "✅ Keystore file created successfully"
+            echo "📁 File size: $(wc -c < keystore/your_signing_keystore.jks) bytes"
+          else
+            echo "❌ Error: Keystore file is empty or not found"
+            exit 1
+          fi
+          
+      - name: Upload Keystore as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: signing-keystore
+          path: keystore/your_signing_keystore.jks
+          retention-days: 1
+          
+      - name: Clean up sensitive file
+        run: |
+          # 可选的清理步骤，增强安全性
+          rm -f keystore/your_signing_keystore.jks
+          echo "🧹 Keystore file cleaned up from runner"
