@@ -107,7 +107,7 @@ class SettingsActivity : AppCompatActivity() {
         lockButton.setOnCheckedChangeListener { _, isChecked ->
             if (!lockscreen.isKeyguardSecure) {
                 lockButton.isChecked = false
-                Toast.makeText(this, "Enable screen lock in device settings first!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "请先给你的设备设置锁屏密码！", Toast.LENGTH_LONG).show()
                 utilities.db.edit().remove(utilities.SETTINGS_LOCK_ENABLED).apply()
                 utilities.db.edit().putBoolean(utilities.SETTINGS_LOCK_ENABLED, false).apply()
             } else {
