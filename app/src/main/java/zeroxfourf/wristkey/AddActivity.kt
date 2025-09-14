@@ -179,9 +179,14 @@ class AddActivity : AppCompatActivity() {
             finish()
         }
 
-        findViewById<Button>(R.id.steamImport).setOnClickListener {
-            startActivity(Intent(applicationContext, SteamImportActivity::class.java))
-            finish()
+        run {
+            val steamId = resources.getIdentifier("steamImport", "id", packageName)
+            if (steamId != 0) {
+                findViewById<Button>(steamId).setOnClickListener {
+                    startActivity(Intent(applicationContext, SteamImportActivity::class.java))
+                    finish()
+                }
+            }
         }
 
         backButton.setOnClickListener {
