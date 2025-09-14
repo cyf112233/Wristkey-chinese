@@ -30,6 +30,7 @@ class AddActivity : AppCompatActivity() {
     private lateinit var fileImport: Button
     private lateinit var adbImport: Button
     private lateinit var scanQRCode: Button
+    private lateinit var steamImport: Button
 
     private lateinit var backButton: Button
 
@@ -137,6 +138,7 @@ class AddActivity : AppCompatActivity() {
         scanQRCode = findViewById (R.id.scanQrCode)
         fileImport = findViewById (R.id.fileImport)
         adbImport = findViewById (R.id.adbTransfer)
+        steamImport = findViewById (R.id.steamImport)
 
         backButton = findViewById (R.id.backButton)
 
@@ -176,6 +178,11 @@ class AddActivity : AppCompatActivity() {
 
         adbImport.setOnClickListener {
             startActivity(Intent(applicationContext, AdbImportActivity::class.java))
+            finish()
+        }
+
+        steamImport.setOnClickListener {
+            startActivity(Intent(applicationContext, SteamImportActivity::class.java))
             finish()
         }
 

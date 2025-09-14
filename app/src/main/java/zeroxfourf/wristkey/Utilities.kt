@@ -122,6 +122,8 @@ class Utilities (context: Context) {
     val ALGO_SHA1 = "SHA1"
     val ALGO_SHA256 = "SHA256"
     val ALGO_SHA512 = "SHA512"
+    val ALGO_STEAM = "STEAM"
+    val STEAM_ALPHABET = "23456789BCDFGHJKMNPQRTVWXY"
 
     var masterKey: MasterKey
     private val accountsFilename: String = "vault.wfs" // WristkeyFS
@@ -611,11 +613,17 @@ class Utilities (context: Context) {
     }
 
     fun generateTotp (secret: String, algorithm: String, digits: Int, period: Int): String {
+        // Steam Guard special case: 5-char code using a custom alphabet from a base64 shared_secret
+        if (algorithm.equals(ALGO_STEAM, ignoreCase = true)) {
+            return generateSteamGuardCode(secret, period)
+        }
+
         lateinit var _algorithm: HmacAlgorithm
         when (algorithm) {
             ALGO_SHA1 -> _algorithm = HmacAlgorithm.SHA1
             ALGO_SHA256 -> _algorithm = HmacAlgorithm.SHA256
             ALGO_SHA512 -> _algorithm = HmacAlgorithm.SHA512
+            else -> _algorithm = HmacAlgorithm.SHA1
         }
 
         val config = TimeBasedOneTimePasswordConfig(
@@ -628,6 +636,45 @@ class Utilities (context: Context) {
         if (algorithm == ALGO_SHA1 && period == 30 && digits == 6) return GoogleAuthenticator(secret.toByteArray(Charset.defaultCharset())).generate()
 
         return TimeBasedOneTimePasswordGenerator(secret.toByteArray(Charset.defaultCharset()), config).generate()
+    }
+
+    // Generates Steam Guard code (5 characters) from base64-encoded shared_secret
+    private fun generateSteamGuardCode(sharedSecretB64: String, period: Int): String {
+        val secretBytes = try {
+            Base64.decode(sharedSecretB64.trim(), Base64.DEFAULT)
+        } catch (_: Exception) {
+            return "ERROR"
+        }
+
+        val step = if (period > 0) period else 30
+        val time = (System.currentTimeMillis() / 1000L) / step
+
+        // 8-byte big-endian time counter
+        val data = ByteArray(8)
+        var value = time
+        for (i in 7 downTo 0) {
+            data[i] = (value and 0xFF).toByte()
+            value = value shr 8
+        }
+
+        val mac = javax.crypto.Mac.getInstance("HmacSHA1")
+        mac.init(javax.crypto.spec.SecretKeySpec(secretBytes, "HmacSHA1"))
+        val hmac = mac.doFinal(data)
+
+        val offset = hmac[hmac.size - 1].toInt() and 0x0F
+        var truncated =
+            ((hmac[offset].toInt() and 0x7F) shl 24) or
+            ((hmac[offset + 1].toInt() and 0xFF) shl 16) or
+            ((hmac[offset + 2].toInt() and 0xFF) shl 8) or
+            (hmac[offset + 3].toInt() and 0xFF)
+
+        val alphabet = STEAM_ALPHABET
+        val chars = CharArray(5)
+        for (i in 0 until 5) {
+            chars[i] = alphabet[truncated % alphabet.length]
+            truncated /= alphabet.length
+        }
+        return String(chars)
     }
 
     private fun pixelsToSp(context: Context, px: Float): Float {
