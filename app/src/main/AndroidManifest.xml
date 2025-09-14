@@ -93,6 +93,10 @@
             android:name="zeroxfourf.wristkey.SettingsActivity"
             android:label="Settings" />
 
+        <activity
+            android:name="zeroxfourf.wristkey.SteamImportActivity"
+            android:label="Steam Import" />
+
     </application>
 
 </manifest>
