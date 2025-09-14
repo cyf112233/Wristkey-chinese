@@ -32,7 +32,8 @@ class SteamImportActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_steam_import)
+        val layoutId = resources.getIdentifier("activity_steam_import", "layout", packageName)
+        setContentView(layoutId)
 
         utilities = Utilities(applicationContext)
         mfaCodesTimer = Timer()
